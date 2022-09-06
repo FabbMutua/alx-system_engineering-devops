@@ -1,2 +1,2 @@
 #!/bin/bash
-cd /etc |grep -o -i bin passwd | wc -l
+tr '[:space:]' '[\n*]' < /etc/passwd | grep -i -c bin
